@@ -2032,7 +2032,7 @@ UI.Cursor.prototype.update = function(frame) {
       // there must be something to track
       this.ttl = (new Date()).getTime() + 1000;
       var translation = this.screen.translate(frame.translation(this.referenceFrame))
-      this.onMove({x: translation[0], y: translation[1]})
+      this.onMove({x: translation[0], y: translation[1], z: translation[2]})
     }
   } else {
     if (frame.hands.length + frame.pointables.length > 0) {
